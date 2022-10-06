@@ -1,0 +1,68 @@
+// During the interview i came up with this questions.
+// Counting Rock Samples
+// John is a geologist, and he needs to count rock samples in order to send it to a chemical laboratory. He has a problem. The laboratory only accepts rock samples by a range of sizes in ppm (parts per million). John needs your help. Your task is to develop a program to get the number of rocks in each range accepted by the laboratory.
+
+// Problem Statement: Given an array samples[] denoting sizes of rock samples and a 2D array ranges[], the task is to count the rock samples that are in the range ranges[i][0] to ranges[i][1], for every possible 1 <= i <= N.
+// Examples:
+
+// Input: samples[] = {345, 604, 321, 433, 704, 470, 808, 718, 517, 811}, ranges[] = {{300, 380}, {400, 700}}
+// Output: 2 4
+// Explanation: 
+// Range [300, 380]: Samples {345, 321} lie in the range. Therefore, the count is 2. 
+// Range [400, 700]: Samples {433, 604, 517, 470} lie in the range. Therefore, the count is 4.
+// Input: samples[] = {400, 567, 890, 765, 987}, ranges[] = {{300, 380}, {800, 1000}
+// Output: 0 2
+
+// Java program
+
+import java.util.*;
+import java.io.*;
+
+class GFG{
+	
+// Function to find the rock
+// samples in the ranges
+static ArrayList<Integer>findRockSample(int ranges[][],
+										int n, int r,
+										int arr[])
+{
+	ArrayList<Integer> a = new ArrayList<>();
+	
+	// Iterate over the ranges
+	for(int i = 0; i < r; i++)
+	{
+	int c = 0;
+	int l = ranges[i][0];
+	int h = ranges[i][1];
+		
+	for(int j = 0; j < arr.length; j++)
+	{
+		if (l <= arr[j] && arr[j] <= h)
+			c += 1;
+		}
+		a.add(c);
+	}
+	return a;
+}
+
+// Driver Code
+public static void main(String args[])
+{
+	int n = 5;
+	int r = 2;
+	int arr[] = { 400, 567, 890, 765, 987 };
+	int ranges[][] = { { 300, 380 }, { 800, 1000 } };
+	
+	ArrayList<Integer> answer = new ArrayList<>();
+	
+	// Function call
+	answer = findRockSample(ranges, n, r, arr);
+
+	for(int i = 0; i < answer.size(); i++)
+		System.out.print(answer.get(i) + " ");
+		
+	System.out.println();
+}
+}
+
+// This code is contributed by bikram2001jha
