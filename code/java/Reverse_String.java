@@ -12,6 +12,7 @@ class ReverseofaString {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter a string : ");
 		str = scan.nextLine();
+		scan.close();
 		char[] ch = str.toCharArray();
 		for (int i = 0; i < (ch.length); i++) {
 			if (ch[i] != ' ') {
