@@ -1,5 +1,5 @@
 
-public class patt9 {
+class patt9 {
     public static void main(String[] args) {
         int r = 5;
         for (int i = 1; i <= 5; i++) {
