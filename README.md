@@ -12,7 +12,7 @@
 ---
 
 ### **1. Technical Coding Question**
-When it comes to coding most of feels like being tricked right 😲. Hehe Jokes apart, this section is for questions asked by companies coming for campus placements for which salary ranges around 3 to 6 lacs.
+When it comes to coding most of feels like being tricked right 😲. Hehe Jokes apart, this section is for questions asked by companies coming for campus placements for which salary ranges around 3 - 6 lacs.
 
 
 ---
